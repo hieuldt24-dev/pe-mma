@@ -1,7 +1,8 @@
 {
   "expo": {
-    "name": "PE",
-    "slug": "PE",
+    "name": "Ví Sinh Viên",
+    "slug": "vi-sinh-vien",
+    "scheme": "visinhvien",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -19,7 +20,9 @@
       "predictiveBackGestureEnabled": false
     },
     "web": {
+      "bundler": "metro",
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": ["expo-router", "expo-secure-store", "expo-font"]
   }
 }

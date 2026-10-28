@@ -1,22 +1,16 @@
 {
-  "name": "pe",
+  "name": "vi-sinh-vien-project",
   "version": "1.0.0",
-  "main": "index.ts",
-  "dependencies": {
-    "expo": "~58.0.19",
-    "expo-status-bar": "~58.0.4",
-    "react": "19.3.0",
-    "react-native": "0.88.0"
-  },
-  "devDependencies": {
-    "@types/react": "~19.3.0",
-    "typescript": "~6.0.3"
-  },
+  "private": true,
   "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web"
-  },
-  "private": true
+    "start": "npm --prefix mobile-app start",
+    "mobile": "npm --prefix mobile-app start",
+    "web": "npm --prefix mobile-app run web",
+    "server": "npm --prefix server run dev",
+    "format": "npx --yes prettier@3.6.2 --write mobile-app/src server/src server/test \"*.json\" \"mobile-app/*.json\" server/package.json mobile-app/eslint.config.js",
+    "format:check": "npx --yes prettier@3.6.2 --check mobile-app/src server/src server/test \"*.json\" \"mobile-app/*.json\" server/package.json mobile-app/eslint.config.js",
+    "typecheck": "npm --prefix mobile-app run typecheck",
+    "lint": "npm --prefix mobile-app run lint",
+    "test": "npm --prefix server test"
+  }
 }
